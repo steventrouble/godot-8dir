@@ -13,7 +13,7 @@ extends Node
 # The fastest this object can move each second
 export var max_speed = 10
 # How fast (in units/s^2) the object should accelerate.
-# Higher values feel more lighter, lower values feel heavier
+# Higher values feel lighter, lower values feel heavier
 export var acceleration = 100
 # How fast (in units/s^2) the object should decelerate.
 # Higher values feel like an RC car, lower values feel like a boat.
@@ -122,7 +122,6 @@ func move(delta):
 			get_parent().translation.z -= velocity.y * delta
 		Axes.ZY:
 			get_parent().translation.z -= velocity.x * delta
-			get_parent().translation.y += velocity.y * delta
 			get_parent().translation.y += velocity.y * delta
 			
 func set_angle():
